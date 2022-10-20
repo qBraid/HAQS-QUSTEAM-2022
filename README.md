@@ -25,7 +25,7 @@ Produce teaching resources to support a student who wants to be able to explain 
                   
 c. A measurement of entanglement is made. Note that how to measure entanglement is an open question, and any method may be used with explanation. 
         
-The Jupyter notebook - both code and writing - should:
+# The Jupyter notebook - both code and writing - should:
 
 **Do it for the audience.** Include written explanation in English and mathematics that a first-year college student who is marginally prepared to take calculus will understand your claims, descriptions, and reasoning. Specifics on this requirement are reflected in the rubric, which is below (coming).
 
@@ -35,10 +35,19 @@ The Jupyter notebook - both code and writing - should:
 
 # Background knowledge
 
-You may assume exposure (requiring a reminder) for specific entry-level QISE knowledge:
+You may assume exposure (requiring a reminder) to specific entry-level QISE knowledge:
 
- * the expression of a state as a linear superposition of \ket 0 and \ket 1. 
- * the correspondence of |010> and |2>. 
+ * The state of a qubit can be expressed as a|0> + b|1> 
+ * After measurement, a qubit is in the corresponding in that basis.
+ * Two-slit experiment, repeated Stern Gerlach measurements, delayed choice experiments
+ * Representing a single qubit state on the Bloch sphere
+ * Representing a qubit using a linear combination of kets in the z basis: |0>|1>|0>, |010>, and |2>. 
+
+Do not assume exposure or knowledge of:
+
+* a measurement operator
+* the tensor product.
+* the density matrix
 
 You may assume (without a reminder)
  
