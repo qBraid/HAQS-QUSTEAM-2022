@@ -38,20 +38,29 @@ c. A measurement of entanglement is made. Note that how to measure entanglement 
 You may assume exposure (requiring a reminder) to specific entry-level QISE knowledge:
 
  * The state of a qubit can be expressed as a|0> + b|1> 
- * After measurement, a qubit is in the corresponding in that basis.
- * Two-slit experiment, repeated Stern Gerlach measurements, delayed choice experiments
+ * After measurement, a qubit is in a state in that basis corresponding to the measured outcome.
+ * Two-slit experiment, repeated Stern Gerlach measurements (not mathy), delayed choice experiments
  * Representing a single qubit state on the Bloch sphere
- * Representing a qubit using a linear combination of kets in the z basis: |0>|1>|0>, |010>, and |2>. 
+ * Representing a qubit using a linear combination of kets in the z basis: |010> (or |0>|1>|0>) or |2>. 
 
 Do not assume exposure or knowledge of:
 
+* mathematically how to change bases (arbitrary angles)
 * a measurement operator
 * the tensor product.
 * the density matrix
 
 You may assume (without a reminder)
  
- * expression a complex numbers as re^{i\theta}, a+bi, or a point in the complex plane
+ * expression a complex numbers as $$re^{i\theta}$$, a+bi, or a point in the complex plane
  * multiplication (scalar and vector product) and addition of real vectors 
  * Right triangle and unit circle trigonometry
 
+Rubric:
+
+Points for explicating at a accessible level for the stated audience:
+
+ * Teleportation
+ * Bell's Inequality
+ * CHSH
+ * CHSH Game
