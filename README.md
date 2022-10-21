@@ -7,23 +7,25 @@ QuSTEAM is a nonprofit organizaton of colleges, universities, and employers supp
 
 ## The QuSTEAM Hackathon Challenge
 
-Produce teaching resources to support a student who wants to be able to explain and investigate entanglement.
+Investigate entanglement and noise. Explain your experiment and result and a level accessible to relative beginners.
 
 ## Minimal elements for an entry in the QuSTEAM Challenge
 
 1.  Jupyter notebook with code and explanation
        
-2.  Two videos of 1-3 minutes each, embedded in or linked from the Jupyter notebook. One video should summarize your experiment and results. Both videos should be accompanied by a text file containing a transcription of the audio.
+2.  A video of 3-5 minutes, embedded in or linked from the Jupyter notebook. The video should summarize your experiment and results. A text file containing a transcription of the audio.
         
-3.  One multiple choice question for each video to check for understanding.  comprehension question per video. 
+3. The Jupyter notebook should include results and analysis for an experiment in which:
         
-4. Data shown in the Jupyter notebook should include results and analysis for an experiment in which:
-        
- a. Qubits are entangled
+   a. Prepare a state in which two or more qubits are entangled.
  
- b. One of two or more different protocols (e.g. wait 100 ms, wait 1 s) are followed to allow a potentially distinct extent or type of undesired decoherence to occur
+   b. Two or more distinct conditions are used during a delay between the preparation of the entangled state and the measurement of the extent of entanglement. Examples:
+   
+      * Prepare a Bell state and wait a varying amount of time to measure decoherence vs. time.
+      * Prepare a Bell state and, during a set amount of wait time, apply single qubit gates to an adjacent qubit.
+      * Prepare a Bell state on various distinct pairs of qubits on a particular platform. 
                   
-c. A measurement of entanglement is made. Note that how to measure entanglement is an open question, and any method may be used with explanation. 
+   c. A measurement of entanglement is made. Note that how to measure entanglement among three or more qubits is an ongoing area of study, and any method may be used with explanation. 
         
 # The Jupyter notebook - both code and writing - should:
 
@@ -37,30 +39,29 @@ c. A measurement of entanglement is made. Note that how to measure entanglement 
 
 You may assume exposure (requiring a reminder) to specific entry-level QISE knowledge:
 
- * The state of a qubit can be expressed as a|0> + b|1> 
+ * The state of a qubit can be expressed as a|0> + b|1>. 
  * After measurement, a qubit is in a state in that basis corresponding to the measured outcome.
- * Two-slit experiment, repeated Stern Gerlach measurements (not mathy), delayed choice experiments
- * Representing a single qubit state on the Bloch sphere
+ * Two-slit experiment, repeated Stern Gerlach measurements (not mathy), delayed choice experiments.
+ * Representing a single qubit state on the Bloch sphere.
  * Representing a qubit using a linear combination of kets in the z basis: |010> (or |0>|1>|0>) or |2>. 
+ * Construction of a quantum circuit using a Python library.
 
 Do not assume exposure or knowledge of:
 
 * mathematically how to change bases (arbitrary angles)
-* a measurement operator
 * the tensor product.
 * the density matrix
 
 You may assume (without a reminder)
  
- * expression a complex numbers as $$re^{i\theta}$$, a+bi, or a point in the complex plane
+ * expression of a complex numbers as $$re^{i\theta}$$, a+bi, or a point in the complex plane
  * multiplication (scalar and vector product) and addition of real vectors 
- * Right triangle and unit circle trigonometry
+ * right triangle and unit circle trigonometry
 
-Rubric:
+# Rubric
 
-Points for explicating at a accessible level for the stated audience:
-
- * Teleportation
- * Bell's Inequality
- * CHSH
- * CHSH Game
+Entries will be evaluated by a panel based upon:
+ 
+  * Explanation of experimental design
+  * Explanation of entanglement accessible to the beginner
+  * Explanation of the meaning and signficance of the results 
