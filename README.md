@@ -54,7 +54,7 @@ Do not assume exposure or knowledge of:
 
 You may assume (without a reminder)
  
- * expression of a complex numbers as $$re^{i\theta}$$, a+bi, or a point in the complex plane
+ * expression of a complex numbers as $re^{i\theta}$, a + bi, or a point in the complex plane
  * multiplication (scalar and vector product) and addition of real vectors 
  * right triangle and unit circle trigonometry
 
