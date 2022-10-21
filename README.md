@@ -1,6 +1,22 @@
 # HAQS-QUSTEAM-2022
 The HAQS QuSTEAM challenge
 
+[<img src="https://qbraid-static.s3.amazonaws.com/logos/Launch_on_qBraid_white.png" width="150">](https://account.qbraid.com?gitHubUrl=https://github.com/qBraid/HAQS-QUSTEAM-2022.git)
+
+Repository containing challenges for the qBraid HAQS 2022 quantum computing hackathon.
+
+For non-registered individuals:
+https://qbraid.com/haqs
+
+For participants:
+https://account.qbraid.com/haqs
+
+
+
+To submit your hack, create a pull request from your team's named branch (created during Step 3 above) following challenge submission instructions.
+
+For help with these instructions, follow along with the HAQS getting started video demo: https://youtu.be/uYGV9w2DUcg
+
 ## About QuSTEAM
 
 QuSTEAM is a nonprofit organizaton of colleges, universities, and employers supporting expansion of quantum information science and engineering undergraduate education to diverse campuses to achieve a diverse workforce. Fall 2022, we are piloting the first four courses of a quantum information minor. Created by 75 professors from Ohio State and two dozen other institutions (a dozen HBCUs, six R1 research universities, small colleges, community colleges, ...) we aim to support adoption of QISE coursework at 300 campuses by 2027.
@@ -8,6 +24,18 @@ QuSTEAM is a nonprofit organizaton of colleges, universities, and employers supp
 ## The QuSTEAM Hackathon Challenge
 
 Investigate entanglement and noise. Explain your experiment and result and a level accessible to relative beginners.
+
+### Getting started
+
+1. Fork this repository into your account, and copy its git clone url e.g. `https://github.com/<user>/HAQS-QUSTEAM-2022.git`
+2. At the top of this `README` in the forked repo, click the **Launch on qBraid** button to clone this repository and launch qBraid Lab.
+3. Open terminal (first icon in the **Other** column in Launcher) and `cd` into the HAQS repo. Set the repo's remote origin using the git clone url you copied in Step 1, and then create a new branch for your team:
+```bash
+cd HAQS-QUSTEAM-2022
+git remote set-url origin <url>
+git branch <team_name>
+git checkout <team_name>
+```
 
 ## Minimal elements for an entry in the QuSTEAM Challenge
 
@@ -65,3 +93,4 @@ Entries will be evaluated by a panel based upon:
   * Explanation of experimental design
   * Explanation of entanglement accessible to the beginner
   * Explanation of the meaning and signficance of the results 
+
