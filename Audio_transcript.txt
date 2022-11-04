@@ -1,0 +1,93 @@
+* We are pleased to share our work as part of the quantum hacking event organized by qBraid. We worked on the challenge given by QuSTEAM.
+
+* As part of our challenge, we had to construct a quantum circuit that entangles qubits and then investigate entanglement.
+
+* In this video, we will go over entanglement and its background. 
+
+* We will mention how physicists have tried to test whether entanglement is real or not. 
+
+* And to this end, we will introduce the CHSH game and analyze it in the classical and quantum setting. 
+
+* Lastly, we mention a few challenges that we had to overcome to run this experiment on an actual quantum computer, and we will present our results. Please keep in mind, this video is meant to complement our work. For more details and explanations, please have a look at the notebook. 
+
+* So what is entanglement? Entanglement is the physical phenomenon where two particles are strongly correlated in the sense that measuring one of the quantum particles can influence the measurement outcome of the other. This is known as non-locality.
+This is the result that puzzled many of the great physicists including Einstein, Podolsky, and Rosen, who published a paper on the subject in 1935.
+
+* Without going into mathematical details, the simplest example of entanglement is the EPR pair 
+
+* As mentioned, one of the main implications of entanglement is non-locality. That is, measurement of one qubit can influence the measurement of another qubit. For this reason, this topic divided physicists for decades 
+
+* So physicists had to come up with ways to experimentally verify entanglement.
+
+* One of the proposed ways to verify entanglement is through a thought experiment called CHSH game. 
+
+* So let’s see how this game is played
+
+* In this game, there is a referee, whom we call Charlie and two players Alice and Bob
+
+* Charlie prepares bits x and y uniformly at random between bits 0 and 1, and sends the bit x to Alice and the bit y to Bob
+
+* Based on the bit x, Alice outputs the bit a between 0 and 1
+
+* And similarly based on the bit y, Bob outputs the bit b between 0 and 1
+
+* If the XOR of a and b is equivalent to the AND operation between x and y, Alice and Bob win the game. Otherwise, they lose the game. 
+
+* The only rule of the game is that Alice and Bob cannot communicate with each other after receiving bits from Charlie. But they can come up with a strategy before the game starts. If they were allowed to communicate, Alice and Bob could always win the game, since by knowing what bits they received, they can choose their bits a and b so that they win the game. So the game becomes interesting only when they cannot communicate after receiving bits from Charlie. 
+
+* To better understand the game, let us play one round of this game. Suppose both Alice and Bob agree that they always output the bit 0 regardless of what they receive from Charlie
+
+* With this strategy a XOR b gives 0 always
+
+* If Charlie gives the bit 0 to both of them, we see that x AND y would be zero. So x AND y = a XOR b = 0. Therefore, Alice and Bob win the game in this case. 
+         
+* If only Alice receives 0 and Bob gets 1, then X and Y still yields 0 and again Alice and Bob win the game.
+         
+* By symmetry, we can see if Alice receives 1 and Bob gets 0, then Alice and Bob win the game yet again. 
+         
+* Finally, if both Alice and Bob receive the bit 1, then x AND y is 1, but the bit 1 is not equal to bit 0, and as a result Alice and Bob lose the game. 
+
+         
+* An exhaustive analysis shows that in the classical case, 75% winning probability is the best that Alice and Bob can achieve.
+            
+* In this table we can see the optimal strategy in the classical case and the quantum case. We see that the optimal strategy in the quantum case is about 85%, which is about 10% better than the optimal strategy for the classical case. For now this may surprise you. A detailed explanation is provided in the notebook, but let us see if quantum computers can verify this result. 
+
+* First, we run the experiment on an idealized simulated quantum computer. It is worth noting that while we can classically simulate a quantum computer, the simulation becomes exponentially difficult as the number of qubits and the depth of the circuit increases.
+
+* We prepare our circuit in the presented code here, and we see the circuit only for the case when the bit 0 was given to both Alice and Bob. In total, there should be 4 circuits to account for all the possible cases. 
+
+* After defining all the required circuits, we can now simulate the game. 
+
+* We define a few variables for keeping track of the runs and further analysis of the results after the simulation is over.
+
+* And In this part, we choose the bit x and y uniformly at random
+
+* Based on the given bit, Alice and Bob make their own measurements according to the agreed upon strategy and produce bits a and b.
+
+* And lastly we check if x AND y is equal to a XOR b
+
+* Finally, we can put everything together and we see a clear trend. The cumulative win rate approaches the expected optimal win rate of 85%! 
+
+* Now that we see that the results in the simulated case are in agreement with theoretical predictions, we can now play this game on an actual quantum computer. 
+
+* But there are certain challenges, one of which is errors due to noise. Quantum computers are highly susceptible to noise, which can come in many different forms, such as heat, turbulence in air and cosmic rays among others. In the notebook, we have a dedicated section to simulating the CHSH game with noise. 
+
+*For the purposes of this video, we would like to focus on a different challenge that we had to overcome, and that is running a piece of code on an actual quantum computer. 
+
+* So let’s have another look at the main code. 
+
+* Specifically, if this line of code was to be submitted on a quantum computer, we would have been placed in a queue everytime. That means for 200 runs being placed on a queue 200 times, which in a time-sensitive hackathon is not a viable option.  
+
+* To overcome this problem, we prepared 4 batches of 50 runs for each of the possible challenges that Charlie sends to Alice and Bob. In other words, we fixed a pair of x and y, and we made measurements on a quantum computer based on the predefined strategy by Alice and Bob.
+
+* You can see the code we used to submit our job on a quantum computer. 
+
+* After establishing our connection to the quantum computer, we ran the experiment on one of the circuits 50 times. 
+
+* Now that we have explained our strategy, we can share our results. Out of 200 rounds, Alice and Bob won the CHSH game 161 times, which translates to 80.5% winning probability. This is above the classical limit. 
+
+* We can see a plot of 200 rounds of the game, where the cumulative win rate, which is indicated by the blue line, was simulated by supposing that every round was sampled uniformly at random. 
+
+* We see that it sits between the expected optimal win rate and the classical limit. With noise taken into account, these results are extremely promising.
+
+* And last but not least, we can be confident that the entanglement, with all of its counterintuitive implications, is a very real thing. Thanks for watching!
